@@ -6,6 +6,7 @@ int potValue = 0;
 void setup() {
   // put your setup code here, to run once:
   pinMode(potPin, INPUT);
+  Serial.begin(115200);
 }
 
 void loop() {
