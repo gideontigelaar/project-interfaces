@@ -37,9 +37,27 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Jump"",
+                    ""name"": ""JumpLow"",
                     ""type"": ""Button"",
                     ""id"": ""62b72305-e10d-43fb-8565-2191c4e05ea0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""JumpMedium"",
+                    ""type"": ""Button"",
+                    ""id"": ""f06f91c6-3ce1-4695-a6c6-7da7072253d3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""JumpHigh"",
+                    ""type"": ""Button"",
+                    ""id"": ""4f6c2024-f4cb-4b85-9136-3da02d478487"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -48,7 +66,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
             ],
             ""bindings"": [
                 {
-                    ""name"": ""Keyboard"",
+                    ""name"": ""Mouse"",
                     ""id"": ""b994745f-dcfc-417f-94b2-5bb7896392de"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
@@ -61,7 +79,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""up"",
                     ""id"": ""d341f794-844b-4f7b-8d69-873330a75f56"",
-                    ""path"": ""<Keyboard>/w"",
+                    ""path"": ""<Mouse>/delta/up"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -72,7 +90,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""down"",
                     ""id"": ""18336f4d-5504-4db7-bc65-d9640c0ad822"",
-                    ""path"": ""<Keyboard>/s"",
+                    ""path"": ""<Mouse>/delta/down"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -83,7 +101,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""left"",
                     ""id"": ""ad229697-af63-45f3-9ead-bf08a145df6b"",
-                    ""path"": ""<Keyboard>/a"",
+                    ""path"": ""<Mouse>/delta/left"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -94,6 +112,61 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""right"",
                     ""id"": ""be5276af-831e-4026-9628-ed99f2adc5d2"",
+                    ""path"": ""<Mouse>/delta/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HorizontalMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Keyboard"",
+                    ""id"": ""44e4db16-2016-4bfe-91fe-3f2d2013c1ca"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HorizontalMovement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""1cd92bff-3650-4302-b4d4-c469c7905f4e"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HorizontalMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""99f8a2d2-f93a-4ad8-807b-bb23a8651267"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HorizontalMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""f67d6a36-0d26-4748-93f6-49199883de45"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HorizontalMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""1b3b3e83-a775-4593-ba67-22b0f97c3731"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -105,11 +178,33 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""e1b9955f-bf82-476a-a4cd-4694e39bcd73"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Jump"",
+                    ""action"": ""JumpLow"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ddc7beaf-39e6-4f94-aa1d-62253754c436"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""JumpMedium"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""248d3d6d-4a9d-4b30-9a70-38d15a3ff3e5"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""JumpHigh"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -121,7 +216,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         // GroundMovement
         m_GroundMovement = asset.FindActionMap("GroundMovement", throwIfNotFound: true);
         m_GroundMovement_HorizontalMovement = m_GroundMovement.FindAction("HorizontalMovement", throwIfNotFound: true);
-        m_GroundMovement_Jump = m_GroundMovement.FindAction("Jump", throwIfNotFound: true);
+        m_GroundMovement_JumpLow = m_GroundMovement.FindAction("JumpLow", throwIfNotFound: true);
+        m_GroundMovement_JumpMedium = m_GroundMovement.FindAction("JumpMedium", throwIfNotFound: true);
+        m_GroundMovement_JumpHigh = m_GroundMovement.FindAction("JumpHigh", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -182,13 +279,17 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_GroundMovement;
     private IGroundMovementActions m_GroundMovementActionsCallbackInterface;
     private readonly InputAction m_GroundMovement_HorizontalMovement;
-    private readonly InputAction m_GroundMovement_Jump;
+    private readonly InputAction m_GroundMovement_JumpLow;
+    private readonly InputAction m_GroundMovement_JumpMedium;
+    private readonly InputAction m_GroundMovement_JumpHigh;
     public struct GroundMovementActions
     {
         private @PlayerControls m_Wrapper;
         public GroundMovementActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @HorizontalMovement => m_Wrapper.m_GroundMovement_HorizontalMovement;
-        public InputAction @Jump => m_Wrapper.m_GroundMovement_Jump;
+        public InputAction @JumpLow => m_Wrapper.m_GroundMovement_JumpLow;
+        public InputAction @JumpMedium => m_Wrapper.m_GroundMovement_JumpMedium;
+        public InputAction @JumpHigh => m_Wrapper.m_GroundMovement_JumpHigh;
         public InputActionMap Get() { return m_Wrapper.m_GroundMovement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -201,9 +302,15 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @HorizontalMovement.started -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnHorizontalMovement;
                 @HorizontalMovement.performed -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnHorizontalMovement;
                 @HorizontalMovement.canceled -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnHorizontalMovement;
-                @Jump.started -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnJump;
-                @Jump.performed -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnJump;
-                @Jump.canceled -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnJump;
+                @JumpLow.started -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnJumpLow;
+                @JumpLow.performed -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnJumpLow;
+                @JumpLow.canceled -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnJumpLow;
+                @JumpMedium.started -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnJumpMedium;
+                @JumpMedium.performed -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnJumpMedium;
+                @JumpMedium.canceled -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnJumpMedium;
+                @JumpHigh.started -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnJumpHigh;
+                @JumpHigh.performed -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnJumpHigh;
+                @JumpHigh.canceled -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnJumpHigh;
             }
             m_Wrapper.m_GroundMovementActionsCallbackInterface = instance;
             if (instance != null)
@@ -211,9 +318,15 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @HorizontalMovement.started += instance.OnHorizontalMovement;
                 @HorizontalMovement.performed += instance.OnHorizontalMovement;
                 @HorizontalMovement.canceled += instance.OnHorizontalMovement;
-                @Jump.started += instance.OnJump;
-                @Jump.performed += instance.OnJump;
-                @Jump.canceled += instance.OnJump;
+                @JumpLow.started += instance.OnJumpLow;
+                @JumpLow.performed += instance.OnJumpLow;
+                @JumpLow.canceled += instance.OnJumpLow;
+                @JumpMedium.started += instance.OnJumpMedium;
+                @JumpMedium.performed += instance.OnJumpMedium;
+                @JumpMedium.canceled += instance.OnJumpMedium;
+                @JumpHigh.started += instance.OnJumpHigh;
+                @JumpHigh.performed += instance.OnJumpHigh;
+                @JumpHigh.canceled += instance.OnJumpHigh;
             }
         }
     }
@@ -221,6 +334,8 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     public interface IGroundMovementActions
     {
         void OnHorizontalMovement(InputAction.CallbackContext context);
-        void OnJump(InputAction.CallbackContext context);
+        void OnJumpLow(InputAction.CallbackContext context);
+        void OnJumpMedium(InputAction.CallbackContext context);
+        void OnJumpHigh(InputAction.CallbackContext context);
     }
 }

@@ -17,7 +17,9 @@ public class InputManager : MonoBehaviour
 
         groundMovement.HorizontalMovement.performed += ctx => horizontalInput = ctx.ReadValue<Vector2>();
 
-        groundMovement.Jump.performed += _ => movement.OnJumpPressed();
+        groundMovement.JumpLow.performed += _ => movement.OnJumpLowPressed();
+        groundMovement.JumpMedium.performed += _ => movement.OnJumpMediumPressed();
+        groundMovement.JumpHigh.performed += _ => movement.OnJumpHighPressed();
     }
 
     private void Update()

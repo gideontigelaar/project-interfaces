@@ -1,0 +1,2 @@
+-change mmovement speed depending on the size of the trackball
+-1 key is low jump, 2 is medium jump, 3 is high jump
